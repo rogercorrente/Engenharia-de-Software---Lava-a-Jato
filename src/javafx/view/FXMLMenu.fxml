@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLMenuController">
+   <children>
+      <BorderPane layoutX="84.0" layoutY="122.0" prefHeight="588.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="58.0" prefWidth="958.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="333.0" layoutY="13.0" prefHeight="32.0" prefWidth="636.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="13.0">
+                     <children>
+                        <Button fx:id="buttonAgendamento" mnemonicParsing="false" onAction="#handleButtonCadastrosAgendamentos" prefHeight="29.0" prefWidth="119.0" style="-fx-background-color: #000000;" text="Agendamento" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="buttonEntrada" mnemonicParsing="false" onAction="#handleButtonCadastrosEntradas" prefHeight="28.0" prefWidth="92.0" style="-fx-background-color: #000000;" text="Entrada" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="buttonSaida" mnemonicParsing="false" onAction="#handleButtonCadastrosSaidas" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: #000000;" text="Saída" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Button>
+                        <MenuBar prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #000000; -fx-font-size: 13px; -fx-text-fill: #FFFFFF;">
+                           <menus>
+                              <Menu fx:id="menuCadastros" mnemonicParsing="false">
+                                 <items>
+                                    <MenuItem fx:id="menuItemCliente" mnemonicParsing="false" onAction="#handleButtonCadastrosClientes" text="Cliente   " />
+                                    <MenuItem fx:id="menuItemVeiculos" mnemonicParsing="false" onAction="#handleButtonCadastrosVeiculos" text="Veículos   " />
+                                    <MenuItem fx:id="menuItemServicos" mnemonicParsing="false" onAction="#handleButtonCadastrosServicos" text="Servicos     " />
+                                    <MenuItem fx:id="menuItemGerente" mnemonicParsing="false" onAction="#handleButtonCadastrosGerentes" text="Gerente" />
+                                    <MenuItem fx:id="menuItemFuncionario" mnemonicParsing="false" onAction="#handleButtonCadastrosFuncionarios" text="Funcionário" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="12.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imagens/Old-Careocadastros.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu fx:id="menuRelatorios" mnemonicParsing="false">
+                                 <items>
+                                    <MenuItem fx:id="menuItemVeiculoCliente" mnemonicParsing="false" onAction="#handleButtonRelatorioVeiculosClientes" text="Veículos Vinculados aos Clientes" />
+                                    <MenuItem fx:id="menuItemTotalServicos" mnemonicParsing="false" onAction="#handleButtonRelatorioValorTotalServicoPorCliente" text="Valor Total Serviços" />
+                                    <MenuItem fx:id="menuItemServicosCliente" mnemonicParsing="false" onAction="#handleButtonRelatorioQuantidadeETipoServicoPorCliente" text="Serviços Realizados Por Cliente" />
+                                    <MenuItem fx:id="menuItemQntAgendamentos" mnemonicParsing="false" onAction="#handleButtonRelatorioQuantidadeAgendamentosPorCliente" text="Quantidade Agendamentos" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="11.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imagens/Old-Careorelatorios.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu fx:id="menuGraficos" mnemonicParsing="false">
+                                 <items>
+                                    <MenuItem fx:id="menuItemAgendamentosGrafico" mnemonicParsing="false" onAction="#handleButtonGraficoAgendamentosPorMes" text="Agendamentos Por Mês" />
+                                    <MenuItem fx:id="menuItemVeiculoMarca" mnemonicParsing="false" onAction="#handleButtonPaneGraficoVeiculoMarca" text="Veículos Por Marca" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="11.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imagens/Old-Careograficos.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                           </menus>
+                        </MenuBar>
+                        <Button fx:id="buttonSobre" mnemonicParsing="false" onAction="#handleButtonSobre" prefHeight="28.0" prefWidth="54.0" style="-fx-background-color: #000000;" text="Sobre" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="logo" fitHeight="40.0" fitWidth="47.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/Captura%20de%20tela%202023-07-03%20180624.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fecharmenu" fitHeight="32.0" fitWidth="20.0" layoutX="1000.0" layoutY="14.0" onMouseClicked="#buttonFecharPrograma" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/Close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane fx:id="anchorPane" prefHeight="546.0" prefWidth="1027.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="ImagemCarro" fitHeight="305.0" fitWidth="1109.0" layoutY="234.0" onMouseClicked="#buttonFecharPrograma" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/Captura%20de%20tela%202023-07-02%20144859.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textNomeEmpresa" cache="true" layoutX="432.0" layoutY="201.0" mouseTransparent="true" strokeType="INSIDE" strokeWidth="0.0" style="-fx-line-spacing: 15;" text="Auto Brilho" textAlignment="JUSTIFY" wrappingWidth="238.5">
+                     <font>
+                        <Font name="SimSun-ExtB" size="42.0" />
+                     </font>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.06161137440758291" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="0.7919999957084656" green="0.7919999957084656" red="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Text>
+               </children></AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
