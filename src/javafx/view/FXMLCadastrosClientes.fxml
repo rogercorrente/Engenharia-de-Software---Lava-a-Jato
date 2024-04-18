@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1109.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLCadastrosClientesController">
+   <children>
+      <BorderPane layoutX="118.0" layoutY="64.0" prefHeight="546.0" prefWidth="1109.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="367.0" prefWidth="54.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <AnchorPane prefHeight="82.0" prefWidth="1109.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Group layoutX="630.0" layoutY="1.0">
+                     <children>
+                        <Button fx:id="buttonInserir" layoutX="-48.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="44.0" prefWidth="93.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagens/inserir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="buttonAlterar" layoutX="92.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleButtonAlterar" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagens/alterar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="buttonRemover" layoutX="218.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="59.0" prefWidth="132.0" style="-fx-background-color: transparenttransparent;">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagens/remover.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableViewClientes" layoutX="53.0" layoutY="65.0" prefHeight="385.0" prefWidth="371.0" style="-fx-background-color: #FFFFFF;">
+                     <columns>
+                        <TableColumn fx:id="tableColumnClienteNome" prefWidth="135.99996334314346">
+                           <graphic>
+                              <ImageView fitHeight="81.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagens/celulanome.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                        <TableColumn fx:id="tableColumnClienteRG" prefWidth="178.0">
+                           <graphic>
+                              <ImageView fitHeight="63.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagens/celularg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></TableColumn>
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <GridPane layoutX="582.0" layoutY="152.0" prefHeight="282.0" prefWidth="310.0" style="-fx-font-size: 14px;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="163.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="160.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Código" />
+                        <Label text="Nome" GridPane.rowIndex="1" />
+                        <Label text="Telefone" GridPane.rowIndex="3" />
+                        <Label text="RG" GridPane.rowIndex="2" />
+                        <Label text="Cidade" GridPane.rowIndex="4" />
+                        <Label text="E-mail" GridPane.rowIndex="5" />
+                        <Label prefHeight="37.0" prefWidth="191.0" text="Data de Nascimento" GridPane.rowIndex="6" />
+                        <Label text="Gênero" GridPane.rowIndex="7" />
+                        <Label fx:id="labelClienteCodigo" GridPane.columnIndex="1" />
+                        <Label fx:id="labelClienteNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelClienteRG" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelClienteTelefone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelClienteCidade" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelClienteEmail" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelClienteDataNascimento" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="labelClienteGenero" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+                  <ImageView fitHeight="69.0" fitWidth="298.0" layoutX="568.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/tituloclientes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
