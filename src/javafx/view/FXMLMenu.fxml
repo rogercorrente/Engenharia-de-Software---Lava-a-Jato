@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLMenuController">
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLMenuController">
    <children>
       <BorderPane layoutX="84.0" layoutY="122.0" prefHeight="588.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -124,7 +124,7 @@
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color blue="0.7919999957084656" green="0.7919999957084656" red="0.800000011920929" />
+                                    <Color red="0.800000011920929" green="0.7919999957084656" blue="0.7919999957084656" />
                                  </color>
                               </Stop>
                            </stops>

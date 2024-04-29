@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.menu-item .label{
+    -fx-text-fill: greenyellow;
+}
